@@ -29,4 +29,4 @@ echo "[+] Running.. "
 protonvpn-cli c
 clear
 echo "[+] Mounting.. "
-virtualbox /root/kaliconfig/kali.vbox
+virtualbox /home/kali/kaliconfig/kali.vbox
