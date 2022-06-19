@@ -21,8 +21,9 @@ clear
 echo "[+] Installing VPN.. "
 sudo apt install -y protonvpn
 clear
-echo "[+] Running.. "
-protonvpn-cli login testobomb
+echo "[+] Login: "
+read LOGIN
+protonvpn-cli login $LOGIN
 echo "[+] Running.. "
 protonvpn-cli ks --permanent
 echo "[+] Running.. "
