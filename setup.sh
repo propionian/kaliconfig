@@ -29,5 +29,8 @@ protonvpn-cli ks --permanent
 echo "[+] Running.. "
 protonvpn-cli c
 clear
+echo "[+] Installing VirtualBox.. "
+sudo apt install -y virtualbox
+clear
 echo "[+] Mounting.. "
 virtualbox /home/kali/kaliconfig/kali.vbox
