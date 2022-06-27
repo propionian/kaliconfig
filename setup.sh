@@ -1,10 +1,13 @@
 #!/bin/bash
+clear
 echo "[+] Changing MAC.. "
 sudo ifconfig wlan0 down
 sudo macchanger wlan0 -a
 sudo ifconfig eth0 down
 sudo macchanger eth0 -a
 sudo ifconfig eth0 up
+echo "Press any key.. "
+pause
 clear
 echo "[+] Updating.. "
 sudo apt update
@@ -18,19 +21,17 @@ clear
 echo "[+] Updating repo.. "
 sudo apt update
 clear
-echo "[+] Installing VPN.. "
-sudo apt install -y protonvpn
+echo "[+] Installing VPN and VirtualBox.. "
+sudo apt install -y protonvpn virtualbox
 clear
 echo "[+] Login: "
 read LOGIN
+clear
 protonvpn-cli login $LOGIN
 echo "[+] Running.. "
 protonvpn-cli ks --permanent
 echo "[+] Running.. "
 protonvpn-cli c
 clear
-echo "[+] Installing VirtualBox.. "
-sudo apt install -y virtualbox
-clear
-echo "[+] Mounting.. "
-virtualbox /home/kali/kaliconfig/kali.vbox
+echo "[+] Launching VirtualBox.. "
+virtualbox
