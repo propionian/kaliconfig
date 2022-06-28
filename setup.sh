@@ -7,7 +7,7 @@ sudo ifconfig eth0 down
 sudo macchanger eth0 -a
 sudo ifconfig eth0 up
 echo "Press any key.. "
-pause
+read key
 clear
 echo "[+] Updating.. "
 sudo apt update
@@ -34,4 +34,4 @@ echo "[+] Running.. "
 protonvpn-cli c
 clear
 echo "[+] Launching VirtualBox.. "
-virtualbox
+virtualbox /home/kali/kaliconfig/Whonix\ Gateway /home/kali/kaliconfig/Parrot\ OS
